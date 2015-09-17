@@ -1,2 +1,2 @@
-# wordpress-theme
+# theme-tienrocker
 Personal wordpress theme
