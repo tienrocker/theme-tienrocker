@@ -8,11 +8,16 @@ function joints_scripts_and_styles()
         // Removes WP version of jQuery
         wp_deregister_script('jquery');
 
-        // Loads jQuery from vendor Files
-        wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/vendor/jquery/dist/jquery.min.js', array(), '2.1.4', true);
+        /**
+         * IE Fallbacks in the header
+         */
+        wp_enqueue_script('ie_html5shiv', get_template_directory_uri() . '/assets/vendor/html5shiv/dist/html5shiv.min.js', array(), '3.7.3', false);
+        wp_script_add_data('ie_html5shiv', 'conditional', 'lt IE 9');
+        wp_enqueue_script('ie_respond', get_template_directory_uri() . '/assets/vendor/respond/dest/respond.min.js', array(), '1.4.2', false);
+        wp_script_add_data('ie_respond', 'conditional', 'lt IE 9');
 
-        // Modernizr from vendor Files
-        // wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/assets/vendor/foundation/js/vendor/modernizr.js', array(), '2.8.3', true );
+        // Loads jQuery from vendor Files in the footer
+        wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/vendor/jquery/dist/jquery.min.js', array(), '2.1.4', true);
 
         // Adding Foundation scripts file in the footer
         wp_enqueue_script('bootstrap', get_template_directory_uri() . '/assets/vendor/bootstrap/dist/js/bootstrap.min.js', array('jquery'), '3.3.5', true);

@@ -13,6 +13,6 @@
 				</div> <!-- end #container -->
 			</div> <!-- end .inner-wrap -->
 		</div> <!-- end .off-canvas-wrap -->
-		<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 	</body>
 </html> <!-- end page -->

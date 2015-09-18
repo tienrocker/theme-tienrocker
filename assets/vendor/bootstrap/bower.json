@@ -29,6 +29,7 @@
     "test-infra"
   ],
   "dependencies": {
+    "html5shiv": "~3.7.3",
     "jquery": ">= 1.9.1"
   }
 }
