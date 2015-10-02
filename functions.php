@@ -12,6 +12,9 @@ require_once(get_template_directory().'/assets/functions/enqueue-scripts.php');
 require_once(get_template_directory().'/assets/functions/menu.php'); 
 require_once(get_template_directory().'/assets/functions/menu-walkers.php'); 
 
+// Register custom breadcrums
+require_once(get_template_directory().'/assets/functions/breadcrums.php'); 
+
 // Register sidebars/widget areas
 require_once(get_template_directory().'/assets/functions/sidebar.php'); 
 

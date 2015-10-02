@@ -12,9 +12,9 @@ function joints_top_nav() {
 	 wp_nav_menu(array(
         'container' => false,                           // Remove nav container
         'container_class' => '',                        // Class of container
-        'menu' => 'The Top Menu', 'jointstheme',                                   // Menu name
-        'menu_class' => 'top-bar-menu right',            // Adding custom nav class
-        'theme_location' => 'main-nav',                // Where it's located in the theme
+        'menu' => 'The Top Menu', 'jointstheme',        // Menu name
+        'menu_class' => 'top-bar-menu right',           // Adding custom nav class
+        'theme_location' => 'main-nav',                 // Where it's located in the theme
         'before' => '',                                 // Before each link <a>
         'after' => '',                                  // After each link </a>
         'link_before' => '',                            // Before each link text
@@ -27,17 +27,17 @@ function joints_top_nav() {
 
 function joints_off_canvas() {
 	    wp_nav_menu(array(
-	        'container' => false,                           // Remove nav container
-	        'container_class' => '',                        // Class of container
-	        'menu' => '',                                   // Menu name
-	        'menu_class' => 'off-canvas-list',              // Adding custom nav class
-	        'theme_location' => 'main-nav',        // Where it's located in the theme
-	        'before' => '',                                 // Before each link <a>
-	        'after' => '',                                  // After each link </a>
-	        'link_before' => '',                            // Before each link text
-	        'link_after' => '',                             // After each link text
-	        'depth' => 5,                                   // Limit the depth of the nav
-	        'fallback_cb' => false,                         // Fallback function (see below)
+	        'container' => false,                   // Remove nav container
+	        'container_class' => '',                // Class of container
+	        'menu' => '',                           // Menu name
+	        'menu_class' => 'off-canvas-list',      // Adding custom nav class
+	        'theme_location' => 'main-nav',         // Where it's located in the theme
+	        'before' => '',                         // Before each link <a>
+	        'after' => '',                          // After each link </a>
+	        'link_before' => '',                    // Before each link text
+	        'link_after' => '',                     // After each link text
+	        'depth' => 5,                           // Limit the depth of the nav
+	        'fallback_cb' => false,                 // Fallback function (see below)
 	        'walker' => new Offcanvas_Walker(),
 	    ));
 	}
@@ -47,15 +47,15 @@ function joints_footer_links() {
     wp_nav_menu(array(
     	'container' => '',                              // Remove nav container
     	'container_class' => 'footer-links clearfix',   // Class of container (should you choose to use it)
-    	'menu' => __( 'Footer Links', 'jointstheme' ),   // Nav name
-    	'menu_class' => 'sub-nav',      // Adding custom nav class
+    	'menu' => __( 'Footer Links', 'jointstheme' ),  // Nav name
+    	'menu_class' => 'sub-nav',                      // Adding custom nav class
     	'theme_location' => 'footer-links',             // Where it's located in the theme
     	'before' => '',                                 // Before the menu
         'after' => '',                                  // After the menu
         'link_before' => '',                            // Before each link
         'link_after' => '',                             // After each link
         'depth' => 0,                                   // Limit the depth of the nav
-    	'fallback_cb' => 'joints_footer_links_fallback'  // Fallback function
+    	'fallback_cb' => 'joints_footer_links_fallback' // Fallback function
 	));
 } /* End Footer Menu */
 
@@ -68,7 +68,7 @@ function joints_main_nav_fallback() {
 		'exclude'     => '',
 		'echo'        => true,
         'link_before' => '',                            // Before each link
-        'link_after' => ''                             // After each link
+        'link_after' => ''                              // After each link
 	) );
 }
 

@@ -6,6 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
 <?php wp_head(); ?>
+<style type="text/css">
+    .footer{background-color: #f5f5f5;color: #999999;line-height: 40px}.source-org{margin: 0; padding: 0}
+</style>
 </head>
 <body <?php body_class(); ?>>
 <div class="off-canvas-wrap" data-offcanvas>
@@ -15,7 +18,3 @@
                 <?php get_template_part('parts/nav', 'top-offcanvas'); ?>
             </header>
             <!-- end .header -->
-
-            <a href="<?php echo esc_url( get_theme_mod( 'jetpack-facebook' ) ); ?>">
-                <?php _e( 'Facebook', '#' ); ?>
-            </a>
