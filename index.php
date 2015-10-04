@@ -1,17 +1,11 @@
 <?php get_header(); ?>
-
-<div id="content" class="container">
-
-	<div id="inner-content" class="row">
-
-		<div id="main" class="large-12 medium-12 columns" role="main">
-
-			<?php get_template_part( 'parts/loop', 'page' ); ?>
-
-		</div> <!-- end #main -->
-
-	</div> <!-- end #inner-content -->
-
-</div> <!-- end #content -->
-
+<div class="page-content">
+    <div class="wrapper">
+        <main class='content' role='main'>
+            <div class='cf frame'>
+                <?php get_template_part('parts/loop', 'page'); ?>
+            </div>
+        </main>
+    </div>
+</div>
 <?php get_footer(); ?>

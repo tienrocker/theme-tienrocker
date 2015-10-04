@@ -1,20 +1,28 @@
-<!doctype html>
-<html class="no-js" <?php language_attributes(); ?>>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>"/>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="pingback" href="<?php bloginfo("pingback_url"); ?>"/>
 <?php wp_head(); ?>
-<style type="text/css">
-    .footer{background-color: #f5f5f5;color: #999999;line-height: 40px}.source-org{margin: 0; padding: 0}
-</style>
 </head>
 <body <?php body_class(); ?>>
-<div class="off-canvas-wrap" data-offcanvas>
-    <div class="inner-wrap">
-        <div id="container">
-            <header class="header" role="banner">
-                <?php get_template_part('parts/nav', 'top-offcanvas'); ?>
-            </header>
-            <!-- end .header -->
+    <a class="fa fa-home logo-fixed" href="/"></a>
+    <?php if(is_home()) : ?>
+    <div class="page-image">
+        <div class="page-image-content"><?php bloginfo('description'); ?></div>
+    </div>
+    <header class="blog-header">
+        <a class="blog-logo" href="/"><?php bloginfo('name'); ?></a>
+        <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
+        <h2 class="blog-description"><?php bloginfo('description'); ?></h2>
+        <div class="social-links">
+            <a class="icon-social[:icon]" target="_blank" href="http://www.facebook.com/i.do.game"><i class="fa fa-facebook"></i></a>
+            &nbsp;&nbsp;·&nbsp;&nbsp;
+            <a class="icon-social[:icon]" target="_blank" href="https://twitter.com/tienrocker"><i class="fa fa-twitter"></i></a>
+            &nbsp;&nbsp;·&nbsp;&nbsp;
+            <a class="icon-social[:icon]" target="_blank" href="https://github.com/tienrocker"><i class="fa fa-github"></i></a>
+        </div>
+    </header>
+    <?php endif; ?>
