@@ -4,7 +4,7 @@
         <div class="inner">
             <h1 class="blog-title"><?php bloginfo('name'); ?></h1>
             <h2 class="blog-description"><?php bloginfo('description'); ?></h2>
-            <a class="btn" href="/">Back to Overview</a>
+            <a class="btn" href="/">Back to Home</a>
         </div>
     </div>
 <?php endif; ?>

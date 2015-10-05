@@ -26,3 +26,10 @@
         </div>
     </header>
     <?php endif; ?>
+ 
+    <?php if(is_single() && has_post_thumbnail()) : ?>
+    <?php $image = wp_get_attachment_image_src( get_post_thumbnail_id(  ), 'full' ); ?>
+    <div class="page-image">
+        <div class="page-image-content" style="background-image: url('<?php echo $image[0] ?>')"><?php the_title(); ?></div>
+    </div>
+    <?php endif; ?>

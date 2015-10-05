@@ -9,17 +9,17 @@
                 <header class="post-header">
                     <h2 class="post-title" itemprop="name">
                         <a itemprop="url" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-                    </h2>
+                    </h2>                    
+                    <div class="post-meta">
+                        <time datetime="<?php get_the_date('d-m-Y'); ?><?php get_post_time('H:i', TRUE); ?>"><?php echo get_the_date('d-m-Y'); ?></time>
+                        <?php foreach ($posttags as $tag) { ?>
+                            <span class="post-tag-<?php echo $tag->slug; ?>">
+                                <a href="<?php echo get_tag_link($tag->term_id) ?>">#<?php echo $tag->name; ?></a>
+                            </span>
+                        <?php } ?>
+                    </div>
                 </header>
                 <section class="post-excerpt" itemprop="description" itemprop="articleBody"><?php the_content(); ?><?php wp_link_pages(); ?></section>
-                <div class="post-meta">
-                    <time datetime="<?php get_the_date('d-m-Y'); ?><?php get_post_time('H:i', TRUE); ?>"><?php echo get_the_date('d-m-Y'); ?></time>
-                    <?php foreach ($posttags as $tag) { ?>
-                        <span class="post-tag-<?php echo $tag->slug; ?>">
-                            <a href="<?php echo get_tag_link($tag->term_id) ?>">#<?php echo $tag->name; ?></a>
-                        </span>
-                    <?php } ?>
-                </div>
             </div>
             <?php comments_template(); ?>
         </article>
