@@ -19,7 +19,7 @@ $previous_post = get_previous_post();
     </div>
     <br />  
 
-    <section class="post-content" itemprop="description" itemprop="articleBody"><?php the_content(); ?><?php wp_link_pages(); ?></section> 
+    <section class="post-excerpt" itemprop="description" itemprop="articleBody"><?php the_content(); ?><?php wp_link_pages(); ?></section> 
 
     <footer class="post-footer">
         <section class="share">

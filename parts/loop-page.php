@@ -7,9 +7,9 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class("post"); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
             <div class="article-item">
                 <header class="post-header">
-                    <h2 class="post-title" itemprop="name">
+                    <h1 class="post-title" itemprop="name">
                         <a itemprop="url" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-                    </h2>                    
+                    </h1>                    
                     <div class="post-meta">
                         <time datetime="<?php get_the_date('d-m-Y'); ?><?php get_post_time('H:i', TRUE); ?>"><?php echo get_the_date('d-m-Y'); ?></time>
                         <?php foreach ($posttags as $tag) { ?>
